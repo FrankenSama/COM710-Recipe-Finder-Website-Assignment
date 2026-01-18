@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Recipe Finder - Discover and share delicious recipes">
+  <title>Recipe Finder - Home</title>
+  <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+  
+  <header>
+    <div class="logo">
+      <h1><img src="assets/logo.png" alt="Recipe Finder"></h1>
+    </div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="register.html">Register</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="search-section">
+      <input type="text" id="search-input" placeholder="Search by recipe or ingredient..." aria-label="Search recipes">
+      <button id="dark-mode-toggle" aria-label="Toggle dark mode">🌙</button>
+      <button id="search-btn" aria-label="Search">🔍</button>
+    </section>
+
+    <div class="recipe-grid" id="recipe-container">
+      <!-- Recipes will be dynamically added here via JavaScript -->
+      <p style="text-align: center; grid-column: 1/-1; padding: 40px;">Loading recipes...</p>
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-column">
+      <p>East Park Terrace, Southampton, SO14 0YN</p>
+      <p>Visitors: <span id="visitor-counter">0</span></p>
+    </div>
+    <div class="footer-column">
+      <p id="intro-text">Welcome to our recipe hub!</p>
+      <select id="language-select" aria-label="Select language">
+        <option value="en">English</option>
+        <option value="es">Español</option>
+      </select>
+    </div>
+    <div class="footer-column">
+      <p>Follow Us:</p>
+      <div class="social-icons">
+        <a href="#" aria-label="Facebook"><img src="assets/facebook-icon.png" alt="Facebook"></a>
+        <a href="#" aria-label="Twitter"><img src="assets/twitter-icon.png" alt="Twitter"></a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Load data first, then app logic -->
+  <script src="scripts/data.js"></script>
+  <script src="scripts/app.js"></script>
+</body>
+</html>

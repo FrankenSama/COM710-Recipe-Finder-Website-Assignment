@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About - Recipe Finder</title>
+  <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+  
+  <header>
+    <div class="logo">
+      <h1><img src="assets/logo.png" alt="Recipe Finder"></h1>
+    </div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="register.html">Register</a>
+    </nav>
+  </header>
+
+  <main class="recipe-details-container">
+    <h1>About Recipe Finder</h1>
+    
+    <section style="margin: 30px 0;">
+      <h2>Our Mission</h2>
+      <p>Recipe Finder is your go-to platform for discovering, sharing, and enjoying delicious recipes from around the world. Whether you're a seasoned chef or a kitchen novice, we're here to inspire your culinary journey.</p>
+    </section>
+
+    <section style="margin: 30px 0;">
+      <h2>Features</h2>
+      <ul style="line-height: 2; margin-left: 20px;">
+        <li><strong>Browse Recipes:</strong> Explore our growing collection of recipes with beautiful thumbnails</li>
+        <li><strong>Search Functionality:</strong> Find recipes by name or ingredient</li>
+        <li><strong>Recipe Details:</strong> View complete ingredient lists and step-by-step instructions</li>
+        <li><strong>Like & Favorite:</strong> Show love for your favorite recipes</li>
+        <li><strong>Comment System:</strong> Share your cooking experiences and tips</li>
+        <li><strong>Dark Mode:</strong> Easy on the eyes with our dark theme option</li>
+        <li><strong>Multilingual:</strong> Currently supporting English and Spanish</li>
+      </ul>
+    </section>
+
+    <section style="margin: 30px 0;">
+      <h2>Technologies Used</h2>
+      <p>This website is built using modern web technologies including HTML5, CSS3, and JavaScript. It features responsive design that works seamlessly on desktop and mobile devices.</p>
+    </section>
+
+    <section style="margin: 30px 0;">
+      <h2>Development Journey</h2>
+      <p>Recipe Finder was created as part of the COM710 Web Technologies module at Solent University. The project demonstrates practical application of:</p>
+      <ul style="line-height: 2; margin-left: 20px;">
+        <li>Semantic HTML markup and W3C validation</li>
+        <li>Modern CSS techniques including Grid and Flexbox</li>
+        <li>JavaScript for interactivity and data management</li>
+        <li>Responsive web design principles</li>
+        <li>User experience optimization</li>
+        <li>Version control with Git</li>
+      </ul>
+    </section>
+
+    <section style="margin: 30px 0;">
+      <h2>Future Enhancements</h2>
+      <p>We're constantly working to improve Recipe Finder. Planned features include:</p>
+      <ul style="line-height: 2; margin-left: 20px;">
+        <li>User authentication and personalized recipe collections</li>
+        <li>Advanced filtering (dietary restrictions, cuisine type, cooking time)</li>
+        <li>Recipe ratings and reviews</li>
+        <li>User-submitted recipes</li>
+        <li>Shopping list generator</li>
+        <li>Nutritional information</li>
+      </ul>
+    </section>
+
+    <section style="margin: 30px 0; text-align: center; padding: 20px; background: #f9f9f9; border-radius: 8px;">
+      <h2>Get Started</h2>
+      <p>Ready to explore delicious recipes?</p>
+      <a href="index.html" style="display: inline-block; margin: 10px; padding: 12px 24px; background: #ff6b6b; color: white; text-decoration: none; border-radius: 6px; font-weight: 500;">Browse Recipes</a>
+      <a href="register.html" style="display: inline-block; margin: 10px; padding: 12px 24px; background: #555; color: white; text-decoration: none; border-radius: 6px; font-weight: 500;">Create Account</a>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-column">
+      <p>East Park Terrace, Southampton, SO14 0YN</p>
+      <p>Visitors: <span id="visitor-counter">0</span></p>
+    </div>
+    <div class="footer-column">
+      <p id="intro-text">Welcome to our recipe hub!</p>
+      <select id="language-select">
+        <option value="en">English</option>
+        <option value="es">Español</option>
+      </select>
+    </div>
+    <div class="footer-column">
+      <p>Follow Us:</p>
+      <div class="social-icons">
+        <a href="#"><img src="assets/facebook-icon.png" alt="Facebook"></a>
+        <a href="#"><img src="assets/twitter-icon.png" alt="Twitter"></a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Dark mode support
+    try {
+      if (localStorage.getItem('darkMode') === 'true') {
+        document.body.classList.add('dark-theme');
+      }
+    } catch (e) {}
+
+    // Visitor counter
+    try {
+      const count = localStorage.getItem('visitorCount') || '0';
+      document.getElementById('visitor-counter').textContent = count;
+    } catch (e) {}
+
+    // Language support
+    const translations = {
+      en: "Welcome to our recipe hub!",
+      es: "¡Bienvenido a nuestro centro de recetas!"
+    };
+
+    try {
+      const lang = localStorage.getItem('language') || 'en';
+      const langSelect = document.getElementById('language-select');
+      const introText = document.getElementById('intro-text');
+      
+      langSelect.value = lang;
+      introText.textContent = translations[lang];
+      
+      langSelect.addEventListener('change', function(e) {
+        const newLang = e.target.value;
+        introText.textContent = translations[newLang];
+        localStorage.setItem('language', newLang);
+      });
+    } catch (e) {}
+  </script>
+</body>
+</html>

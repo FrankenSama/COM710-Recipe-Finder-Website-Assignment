@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Login to Recipe Finder">
+  <title>Login - Recipe Finder</title>
+  <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+  
+  <header>
+    <div class="logo">
+      <h1><img src="assets/logo.png" alt="Recipe Finder"></h1>
+    </div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="register.html">Register</a>
+    </nav>
+  </header>
+
+  <main class="auth-form">
+    <h1>Login to Your Account</h1>
+    <form id="login-form" novalidate>
+      <label for="login-email">Email*</label>
+      <input 
+        type="email" 
+        id="login-email" 
+        name="email"
+        required
+        placeholder="your.email@example.com"
+        aria-required="true">
+
+      <label for="login-password">Password*</label>
+      <input 
+        type="password" 
+        id="login-password" 
+        name="password"
+        required
+        placeholder="Enter your password"
+        aria-required="true">
+
+      <button type="submit">Login</button>
+      <p id="form-message" style="display: none;"></p>
+    </form>
+
+    <p style="text-align: center; margin-top: 20px; color: #666;">
+      Don't have an account? <a href="register.html" style="color: #ff6b6b; text-decoration: none;">Register here</a>
+    </p>
+  </main>
+
+  <footer>
+    <div class="footer-column">
+      <p>East Park Terrace, Southampton, SO14 0YN</p>
+      <p>Visitors: <span id="visitor-counter">0</span></p>
+    </div>
+    <div class="footer-column">
+      <p id="intro-text">Welcome to our recipe hub!</p>
+      <select id="language-select" aria-label="Select language">
+        <option value="en">English</option>
+        <option value="es">Español</option>
+      </select>
+    </div>
+    <div class="footer-column">
+      <p>Follow Us:</p>
+      <div class="social-icons">
+        <a href="#" aria-label="Facebook"><img src="assets/facebook-icon.png" alt="Facebook"></a>
+        <a href="#" aria-label="Twitter"><img src="assets/twitter-icon.png" alt="Twitter"></a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="scripts/login.js"></script>
+</body>
+</html>

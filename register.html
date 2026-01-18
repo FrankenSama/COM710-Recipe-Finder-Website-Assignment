@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Create a Recipe Finder account">
+  <title>Register - Recipe Finder</title>
+  <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+  
+  <header>
+    <div class="logo">
+      <h1><img src="assets/logo.png" alt="Recipe Finder"></h1>
+    </div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="register.html">Register</a>
+    </nav>
+  </header>
+
+  <main class="auth-form">
+    <h1>Create an Account</h1>
+    <form id="register-form" novalidate>
+      <label for="username">Username*</label>
+      <input 
+        type="text" 
+        id="username" 
+        name="username"
+        required 
+        minlength="3"
+        placeholder="Choose a username (min 3 characters)"
+        aria-required="true">
+
+      <label for="email">Email*</label>
+      <input 
+        type="email" 
+        id="email" 
+        name="email"
+        required
+        placeholder="your.email@example.com"
+        aria-required="true">
+
+      <label for="password">Password*</label>
+      <input 
+        type="password" 
+        id="password" 
+        name="password"
+        required 
+        minlength="6"
+        placeholder="Choose a strong password (min 6 characters)"
+        aria-required="true">
+
+      <label style="display: flex; align-items: center; margin-top: 20px; cursor: pointer;">
+        <input type="checkbox" id="dark-mode-pref" name="darkMode"> 
+        <span style="margin-left: 8px;">Enable dark mode by default</span>
+      </label>
+
+      <button type="submit">Register</button>
+      <p id="form-message" style="display: none;"></p>
+    </form>
+
+    <p style="text-align: center; margin-top: 20px; color: #666;">
+      Already have an account? <a href="index.html" style="color: #ff6b6b; text-decoration: none;">Browse recipes</a>
+    </p>
+  </main>
+
+  <footer>
+    <div class="footer-column">
+      <p>East Park Terrace, Southampton, SO14 0YN</p>
+      <p>Visitors: <span id="visitor-counter">0</span></p>
+    </div>
+    <div class="footer-column">
+      <p id="intro-text">Welcome to our recipe hub!</p>
+      <select id="language-select" aria-label="Select language">
+        <option value="en">English</option>
+        <option value="es">Español</option>
+      </select>
+    </div>
+    <div class="footer-column">
+      <p>Follow Us:</p>
+      <div class="social-icons">
+        <a href="#" aria-label="Facebook"><img src="assets/facebook-icon.png" alt="Facebook"></a>
+        <a href="#" aria-label="Twitter"><img src="assets/twitter-icon.png" alt="Twitter"></a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="scripts/register.js"></script>
+</body>
+</html>
