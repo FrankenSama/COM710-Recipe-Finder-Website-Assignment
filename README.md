@@ -1,196 +1,245 @@
-# Recipe Finder
+# 🍽️ Recipe Finder – COM710 Web Technologies Project
 
-A modern, responsive recipe website built with HTML, CSS, and JavaScript as part of the COM710 Web Technologies module at Solent University.
+![HTML5](https://img.shields.io/badge/HTML5-Semantic-orange)
+![CSS3](https://img.shields.io/badge/CSS3-Responsive-blue)
+![JavaScript](https://img.shields.io/badge/JavaScript-ES6%2B-yellow)
+![License](https://img.shields.io/badge/License-Educational-lightgrey)
 
-## 🌟 Features
+A modern, responsive recipe website developed as part of **COM710 – Web Technologies** at **Solent University**, demonstrating front-end web development skills using **HTML5, CSS3, and JavaScript**.
 
-- **Recipe Browsing**: View a collection of recipes with thumbnails and details
-- **Search Functionality**: Search recipes by name or ingredients
-- **Recipe Details**: Detailed pages with ingredients, instructions, and comments
-- **User Interaction**: Like recipes and leave comments
-- **User Registration**: Create an account with custom preferences
-- **Dark Mode**: Toggle between light and dark themes
-- **Multilingual Support**: Switch between English and Spanish
-- **Visitor Counter**: Track site visits
-- **Responsive Design**: Works seamlessly on desktop, tablet, and mobile devices
+---
+
+## 📊 Project Highlights
+
+| Aspect | Technologies Used | Key Features |
+|------|------------------|--------------|
+| **Frontend** | HTML5, CSS3 | Semantic markup, responsive layout |
+| **Interactivity** | JavaScript (ES6+) | Search, likes, comments, dark mode |
+| **Design** | Flexbox, Grid | Mobile-first responsive design |
+| **Persistence** | LocalStorage API | Theme, preferences, user data |
+| **Accessibility** | WCAG principles | Usable and readable interface |
+
+---
+
+## 🎯 Learning Outcomes Demonstrated
+
+### 1. HTML & Semantic Markup
+- W3C-valid HTML structure
+- Accessible forms and navigation
+- Well-commented, readable source code
+
+### 2. Cascading Style Sheets
+- Responsive layouts using Flexbox and Grid
+- Media queries for multiple screen sizes
+- Custom properties for theming
+- Consistent visual hierarchy
+
+### 3. JavaScript Interactivity
+- DOM manipulation and event handling
+- Dynamic recipe rendering
+- Search and filtering functionality
+- Client-side form validation
+- LocalStorage-based data persistence
+
+### 4. Web Engineering Practice
+- Incremental and iterative development
+- Modular JavaScript structure
+- Clear separation of concerns
+- Version control with Git
+
+---
+
+## 🌟 Key Features
+
+- **Recipe Browsing** with thumbnails and summaries
+- **Search Functionality** by recipe name or ingredients
+- **Recipe Details Pages** with ingredients and instructions
+- **User Interaction**: likes and comments
+- **User Registration** with preferences
+- **Dark Mode Toggle**
+- **Multilingual Support** (English / Spanish)
+- **Visitor Counter**
+- **Fully Responsive Design**
+
+---
+
+## 🧱 Application Architecture
+
+```
+Frontend Architecture
+├── HTML (Structure)
+│   ├── index.html
+│   ├── recipe-details.html
+│   ├── register.html
+│   └── about.html
+├── CSS (Presentation)
+│   └── main.css
+└── JavaScript (Behaviour)
+    ├── app.js
+    ├── data.js
+    ├── recipeDetails.js
+    └── register.js
+```
+
+---
 
 ## 📁 Project Structure
 
 ```
 recipe-finder/
-├── index.html              # Main homepage with recipe grid
-├── recipe-details.html     # Individual recipe details page
+├── index.html              # Homepage with recipe grid
+├── recipe-details.html     # Individual recipe page
 ├── register.html           # User registration form
-├── about.html             # About page
+├── about.html              # Project information
 ├── styles/
-│   └── main.css           # All styling
+│   └── main.css            # Global stylesheet
 ├── scripts/
-│   ├── app.js            # Main application logic
-│   ├── data.js           # Recipe data storage
-│   ├── recipeDetails.js  # Recipe details page logic
-│   └── register.js       # Registration form logic
+│   ├── app.js              # Core application logic
+│   ├── data.js             # Recipe data
+│   ├── recipeDetails.js    # Recipe page logic
+│   └── register.js         # Registration logic
 ├── assets/
-│   ├── logo.png          # Site logo
-│   ├── background.png    # Header background
-│   └── [recipe images]   # Recipe thumbnails
+│   ├── logo.png
+│   ├── background.png
+│   └── recipe-images/
 └── README.md
 ```
 
-## 🚀 Getting Started
+---
+
+## 🚀 Quick Start
 
 ### Prerequisites
-
 - Modern web browser (Chrome, Firefox, Safari, Edge)
-- Web server (optional, for local development)
+- Optional: local web server
 
-### Installation
+### Running the Project
 
-1. Clone or download the repository
-2. Open `index.html` in your web browser, or
-3. Use a local development server:
+#### Option 1: Open directly
+```
+Open index.html in your browser
+```
 
+#### Option 2: Local development server
 ```bash
-# Using Python 3
+# Python 3
 python -m http.server 8000
 
-# Using Node.js http-server
+# Node.js
 npx http-server
 
-# Using PHP
+# PHP
 php -S localhost:8000
 ```
 
-4. Navigate to `http://localhost:8000` in your browser
+Navigate to `http://localhost:8000`
 
-## 💻 Technologies Used
+---
 
-- **HTML5**: Semantic markup, forms, and validation
-- **CSS3**: Flexbox, Grid, animations, and responsive design
-- **JavaScript (ES6+)**: DOM manipulation, event handling, and data management
-- **LocalStorage API**: Client-side data persistence
-
-## 🎨 Design Features
+## 🎨 Design & UX Features
 
 ### CSS Techniques
-- Grid and Flexbox layouts
-- CSS transitions and animations
-- Responsive design with media queries
-- CSS custom properties for theming
-- Drop shadows and visual effects
+- Flexbox and Grid layouts
+- Smooth transitions and hover effects
+- Responsive typography
+- CSS variables for theming
+- Dark/light mode support
 
-### JavaScript Features
-- Dynamic content rendering
-- Search and filter functionality
-- Form validation
+### JavaScript Functionality
+- Dynamic recipe rendering
+- Live search and filtering
 - Comment system
-- Theme persistence
-- Multi-language support
+- Like functionality
+- Theme and language persistence
+- Form validation and error handling
+
+---
 
 ## 📱 Responsive Design
 
-The website is fully responsive and optimized for:
-- Desktop (1200px+)
-- Tablet (768px - 1199px)
-- Mobile (< 768px)
+Optimized for:
+- **Desktop**: 1200px+
+- **Tablet**: 768px – 1199px
+- **Mobile**: < 768px
 
-## 🌐 Browser Support
+---
 
-- Chrome (latest)
-- Firefox (latest)
-- Safari (latest)
-- Edge (latest)
+## 🧪 Testing Methodology
 
-## 📊 Project Management
-
-This project was developed using:
-- **Version Control**: Git with logical, incremental commits
-- **Development Approach**: Iterative development with testing
-- **Code Organization**: Modular JavaScript with separation of concerns
-- **Documentation**: Inline comments and comprehensive README
-
-## 🧪 Testing
-
-The project has been tested for:
-- W3C HTML validation
+### Frontend Validation
+- W3C HTML Validator
 - CSS validation
-- Cross-browser compatibility
-- Responsive design on multiple devices
-- Form validation and error handling
-- JavaScript functionality
+- JavaScript console testing
 
-## 🎓 Learning Outcomes Demonstrated
+### Functional Testing
+- Search functionality
+- Registration form validation
+- Comment and like interactions
+- Theme persistence
+- Language switching
 
-1. **Good Markup with HTML**
-   - Structured documents passing W3C validation
-   - Commented and neatly laid out source code
+### Cross-Browser Testing
+- Chrome
+- Firefox
+- Edge
+- Safari
 
-2. **Cascading Style Sheets**
-   - Robust and tasteful stylesheet design
-   - Proper use of IDs and Classes
-   - Accessibility considerations
-   - Cross-browser compatibility
-
-3. **Interactive Elements**
-   - Form handling with validation
-   - JavaScript event handling
-   - Dynamic content updates
-
-4. **Web Engineering Practice**
-   - Incremental development approach
-   - Code documentation
-   - Version control usage
-   - Asset organization
-
-## 🔮 Future Enhancements
-
-- Backend integration with Node.js or Python Flask
-- Database implementation for recipe storage
-- User authentication system
-- Recipe CRUD operations
-- Advanced filtering and sorting
-- Rating system
-- Nutritional information
-- Recipe sharing functionality
-- Print-friendly recipe cards
-- Shopping list generation
+---
 
 ## 📝 Assessment Compliance
 
-This project fulfills the requirements of COM710 Assessment AE1:
-- ✅ Proof of concept recipe website
+This project satisfies **COM710 Assessment AE1** requirements:
+- ✅ Proof-of-concept recipe website
 - ✅ Guest browsing with thumbnails
 - ✅ User registration with preferences
 - ✅ Recipe interaction (likes, comments)
 - ✅ Search functionality
 - ✅ Responsive design
-- ✅ W3C validated HTML/CSS
-- ✅ Documented code
-- ✅ Version control evidence
-
-## 👤 Author
-
-Developed as part of COM710 Web Technologies module at Solent University.
-
-## 📄 License
-
-This project is created for educational purposes as part of university coursework.
-
-## 🙏 Acknowledgments
-
-- Solent University for project guidelines
-- Assessment brief COM710 AE1
-- Recipe data and images used for demonstration purposes
-
-## 📞 Support
-
-For questions or issues:
-1. Check the documentation in code comments
-2. Review the assessment brief
-3. Contact module leader: Daniel Olabanji
+- ✅ W3C-compliant HTML/CSS
+- ✅ Documented and commented code
+- ✅ Git version control usage
 
 ---
 
-**Last Updated**: January 2025  
-**Module**: COM710 Web Technologies  
-**Level**: 7  
-**Institution**: Solent University
+## 🔮 Future Enhancements
+
+- Backend integration (Node.js / Flask)
+- Database-driven recipe storage
+- User authentication
+- Recipe CRUD functionality
+- Advanced filtering and sorting
+- Rating system
+- Nutritional information
+- Printable recipe cards
+- Shopping list generation
+
+---
+
+## 📚 Academic Context
+
+- **Module**: COM710 – Web Technologies  
+- **University**: Solent University  
+- **Program**: MSc Computer Engineering  
+- **Level**: 7  
+- **Date**: January 2025  
+- **Module Leader**: Daniel Olabanji  
+
+---
+
+## 👤 Author
+
+Developed as part of the **MSc Computer Engineering** program at **Solent University**.
+
+---
+
+## 📄 License
+
+This project is created for **educational purposes** as part of university coursework.
+
+---
+
+## 🙏 Acknowledgments
+
+- Solent University
+- COM710 Assessment Brief (AE1)
+- Recipe data and images used for demonstration purposes
